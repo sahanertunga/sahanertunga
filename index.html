@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Tam Benlik Tatil</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div class="sbt">
+<span>
+<a href="#" 
+
+  onclick="
+
+    window.open(
+
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+
+      'facebook-share-dialog', 
+
+      'width=626,height=436'); 
+
+    return false;">
+
+<img src="img/facepaylas.jpg"/>
+</a>
+</div>
+
+<div class="katman">
+<div class="anabaslik"><span>
+<a href="#" 
+
+  onclick="
+
+    window.open(
+
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+
+      'facebook-share-dialog', 
+
+      'width=626,height=436'); 
+
+    return false;">
+
+<img src="img/facepaylas.jpg"/>
+</a>
+</span></div>
+<div class="baslik"><span>Tatil Hayalleri Başlasın!</span></div>
+<form action="tatilformu_islem.php" method="POST">
+<div class="solform">
+<fieldset>
+    <legend>Demografik</legend>
+<!--Cinsiyet bölümü-->
+	<div class="inputname">
+		<label>* Cinsiyet</label>
+	<input type="radio" name="cinsiyet"  value="k"> Kadın 
+	<input type="radio" name="cinsiyet"  value="e"> Erkek
+	</div>
+	<!--Mail bölümü-->
+	<div class="inputname">
+		<label>* Yaşınız</label>
+	</div>
+	<div class="input">
+		<input type="text" name="yas" size="4"/>
+	</div>
+<!--Mail bölümü-->
+	<div class="inputname">
+		<label>Mail Adresiniz (Projemizle ilgili bilgi almak isterseniz)</label>
+	</div>
+	<div class="input">
+		<input type="text" name="mail">
+	</div>
+	
+<!--Sehir bölümü-->
+	<div class="inputname">
+		<label>* Hangi Şehirde yaşıyorsunuz?</label>
+	</div>
+	<div class="input">
+		<select name="sehir">
+		<option name="sehir" id="0"> Şehir Seçin</option>
+		<option name="sehir" id="53"> Rize</option>
+		<option name="sehir" id="100"> YURTDIŞI</option>
+    </select>
+	</div>
+
+	</fieldset>
+<!--Tatille ilgili bölümler-->
+<hr>
+<fieldset>
+    <legend>Tatille modunuzla ilgili</legend>
+<div class="inputname">
+		<label>* Tatil Türü:</label>
+	<input type="checkbox" name="tatilturu[]" value="deniz"/> Deniz
+	<input type="checkbox" name="tatilturu[]" value="yayla"/> Yayla
+	<input type="checkbox" name="tatilturu[]" value="kultur"/> Kültür
+	</div>
+	<br/>
+	<div class="inputname">
+	<label>* Tatil Modunuz:</label>
+	<input type="checkbox" name="tatilmod[]" value="enerjik"/> Enerjik
+	<input type="checkbox" name="tatilmod[]" value="melankolik"/> Melankolik
+	<input type="checkbox" name="tatilmod[]" value="kesifli"/> Keşifli
+	</div>
+	<br/>
+	<div class="inputname">
+	<label>* Tatil Bütçeniz:</label>
+	<input type="radio" name="tatilbutce" value="eko"/> Ekonomik
+	<input type="radio" name="tatilbutce" value="orta"/> Orta Direk
+	<input type="radio" name="tatilbutce" value="lux"/> VIP
+	</div>
+	<br/>
+	<div class="inputname">
+	<label>* Tatil Kafası:</label>
+	<input type="radio" name="tatilmod2" value="butik"/> Butik 
+	<input type="radio" name="tatilmod2" value="toplu"/> Topluca 
+	<input type="radio" name="tatilmod2" value="farketmez"/> Farketmez 
+	</div>
+	
+	</fieldset>
+<hr/>
+
+<fieldset>
+    <legend>Tatil Deneyimleriniz</legend>
+	
+<!-- Engüzel tatille ilgili anahtar kelimeler -->
+		<div class="inputname">
+		<label> "Super bir tatildi" dediğiniz tatili tanımlamak için kullanacağınız anahtar kelimeler (Virgül ile ayırarak yazınız.)</label>
+	</div>
+	<div class="input">
+		<input type="text" name="guzelanahtar"/>
+	</div>
+	
+<!-- Enkötü tatille ilgili anahtar kelimeler -->
+		<div class="inputname">
+		<label> "Kötü bir tatildi" dediğiniz tatili tanımlamak için kullanacağınız anahtar kelimeler (Virgül ile ayırarak yazınız.)</label>
+	</div>
+	<div class="input">
+		<input type="text" name="kotuanahtar"/>
+	</div>
+	
+	</div>
+	</fieldset>
+	
+<!-- Hayal edilenle  ilgili metin -->
+<div class="sagform">
+ <fieldset>
+    <legend>Hayalinizdeki Tatil</legend>
+	<!--Tatil süresi bölümü-->
+			<div class="inputname">
+		<label>* Sizin için ideal tatil süresi (gün)</label>
+	</div>
+	<div class="input">
+		<input type="text" name="tatilsuresi"/>
+	</div>
+	<!--Gidilmek istenen hayal şehir -->
+		<div class="inputname">
+		<label>* En çok görmek istediğiniz şehir</label>
+	</div>
+	<div class="input">
+		<input type="text" name="hayalsehir"/>
+	</div>
+</fieldset>	
+	<div class="inputname">
+		<label>Hayalinizdeki Tatili Bizimle Paylaşın </label>
+	</div>
+	<div class="input">
+		<textarea name="tatilhayal" id="tatilhayal"/>
+		</textarea>
+	</div>
+	
+<!-- Onay butonu-->
+	<div class="onay">
+		<input type="submit" value="Gönder" />
+	</div>
+	</div>
+</div>
+</form>
+
+</div>
+</body>
+</html>
